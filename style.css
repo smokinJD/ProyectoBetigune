@@ -1,0 +1,30 @@
+body {
+    margin: 10px;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 25px
+}
+
+#form{
+    padding: 50px;
+}
+
+#divRadioGenero{
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#divBtnEnviar {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#btnEnviar {
+    text-align: center;
+    width: 800px;
+}

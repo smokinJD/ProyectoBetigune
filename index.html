@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+    <title>Consultas</title>
+</head>
+<body>
+    <h1 > Formulario Consultas </h1>
+    <div id="form">
+
+        <form action="/form" method="POST">
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Nombre*</label>
+                    <input type="text" class="form-control input-form" placeholder="Nombre" name="nombre" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Apellidos</label>
+                    <input type="text" class="form-control input-form" placeholder="Apellidos" name="apellidos">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email*</label>
+                <input type="email" class="form-control input-form" placeholder="Email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Telefono</label>
+                <input type="number" class="form-control input-form" placeholder="telefono" name="telefono">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" class="form-control input-form" name="fechaNacimiento">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Genero</label>
+                    <div class="form-row" id="divRadioGenero">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="hombre">
+                            <label class="form-check-label">Hombre</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="mujer">
+                            <label class="form-check-label" for="inlineRadio2">Mujer</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="otro">
+                            <label class="form-check-label">Otro</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Tipo Consulta</label>
+                    <select id="tipoConsultas" class="form-control" name="tipoConsulta">
+                        <option value="informacion" selected>Informacion</option>
+                        <option value="incidencia tecnica">Incidencia Tecnica</option>
+                        <option value="otro">Otros</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Subtipo Consulta</label>
+                    <select id="subtipoConsultas" class="form-control" name="subtipoConsulta">
+                        <option data-option="informacion" selected>Productos</option>
+                        <option data-option="informacion">Promociones</option>
+                        <option data-option="informacion">Devoluciones</option>
+                        <option data-option="informacion">Envios</option>
+
+                        <option data-option="incidencia tecnica">Instalacion</option>
+                        <option data-option="incidencia tecnica">Trensporte</option>
+
+                        <option data-option="otro">Consulta general</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Mensaje*</label>
+                <textarea class="form-control" rows="8" name="mensaje" required></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                    <label class="form-check-label" for="gridCheck">
+                        He leido y acepto las condiciones de uso.
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group" id="divBtnEnviar">
+                <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+            </div>
+
+            <!-- llamada al jquery index.js -->
+            <script type='text/javascript' src="index.js"></script>
+
+        </form>
+
+    </div>
+</body>
+</html>
